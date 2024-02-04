@@ -1,38 +1,237 @@
-.App {
+:root {
+  --NavFontSize: 2rem;
+  --NavFont: "Belleza", sans-serif;
+  --Lumiere: "Source Serif 4", serif;
+}
+
+.nav {
+  display: flex;
+  padding: 1.5rem 15rem 3rem 15rem;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  min-width: 601px;
+  height: 1vh;
+  margin-bottom: 0px;
+  display: sticky;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.userButton {
+  text-decoration: none;
+  font-size: var(--NavFontSize);
+  color: black;
+  font-family: var(--NavFont);
+  font-weight: 800;
+  margin-top: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.active {
+  text-decoration: none;
+  font-size: var(--NavFontSize);
+  color: red;
+  font-family: var(--NavFont);
+  font-weight: 800;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.notactive {
+  text-decoration: none;
+  font-size: var(--NavFontSize);
+  color: black;
+  font-family: var(--NavFont);
+  font-weight: 800;
+}
+
+.homepage {
+  margin-bottom: 0px;
+  position: relative;
+  width: 100%;
+  height: 93vh;
+  z-index: -3;
+}
+.banner {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  z-index: -2;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  z-index: 0;
+}
+#Lumiere {
+  font-family: var(--Lumiere);
+  color: red;
+  font-size: 11rem;
+}
+
+.bottom {
+  width: 100%;
+  min-width: 801px;
+  height: 250px;
+  margin-top: 1px;
+  position: static;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  color: black;
+  margin-left: 10rem;
+  font: var(--NavFont);
+  font-size: 3rem;
+  margin-bottom: 150px;
+  display: flex;
+}
+
+.copyright {
+  margin-top: 4rem;
+  font-size: 20px;
+  font-weight: 350;
+}
+
+.bottompt2 {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font: var(--NavFont);
+  font-size: var(1rem);
+  margin-top: 0.5rem;
+}
+
+.contact {
+  font-weight: 400;
+  font-size: var(1rem);
+}
+
+.socials {
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.socialitems {
+  margin-top: 10px;
+  display: flex;
+  height: 140px;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 350;
+  justify-content: space-around;
+}
+
+.socialitems a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 350;
+}
+.followus {
+  margin-bottom: 0px;
+}
+
+.loginpage {
+  position: relative;
+  width: 100%;
+  height: 93vh;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.loginmodal {
+  margin-top: 2rem;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+  height: 70%;
+  width: 80%;
+  max-width: 1450px;
+  min-width: 900px;
+  margin: auto;
+  display: flex;
+  flex: row;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.login_image {
+  min-height: 99%;
+  height: auto;
+  width: 60%;
+  min-width: 500px;
+  background-image: url("./images/Login_Image.jpeg");
+  background-position: center;
+  background-size: 900px 1050px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome {
   color: white;
+  font-family: var(--NavFont);
+  font-size: 7rem;
+  font-weight: 100;
+}
+.login_section {
+  min-height: 99%;
+  height: auto;
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  width: 40%;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3rem;
+  color: black;
+  font-family: var(--NavFont);
 }
 
-.App-link {
-  color: #61dafb;
+.loginform {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: center;
+  margin: 10px;
+  justify-content: space-around;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginInput {
+  height: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.formbutton {
+  height: 2.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.logout {
+  height: 2.5rem;
+  font-size: 1rem;
+  width: 7rem;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
 }
