@@ -27,9 +27,31 @@ export default function ShopPage() {
     getProductData();
   }, []);
 
-  function handleSort(option) {
-    let type = option.value;
-    setSort(type);
+  async function handleSort(option) {
+    try {
+      let type = option.value;
+      setSort(type);
+      const data = await getDocs(productListRef);
+      const parsedData = data.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+
+      if (type === "price") {
+        console.log("price");
+        parsedData.sort((a, b) => a.price - b.price);
+      } else if (type === "atoz") {
+        console.log("atoz");
+        parsedData.sort((a, b) => (a.name > b.name ? 1 : -1));
+      } else if (type === "ztoa") {
+        console.log("ztoa");
+        parsedData.sort((a, b) => (a.name > b.name ? -1 : 1));
+      } else {
+        parsedData.sort();
+      }
+      setProductData(parsedData);
+    } catch {
+      console.log("err");
+    }
   }
 
   return (

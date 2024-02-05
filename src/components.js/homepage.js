@@ -1,5 +1,5 @@
 import React from "react";
-import bannervid from "../images/Banner.mov";
+import bannervid from "../assets/Banner.mov";
 import "../App.css";
 
 export default function Homepage() {

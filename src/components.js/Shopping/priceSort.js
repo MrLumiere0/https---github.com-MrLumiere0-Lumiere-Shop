@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function DropDownMenu({ props, onSelect, type }) {
+export default function DropDownMenu({ props, onSelect, sorttype }) {
   return (
     <div className='menu'>
       <label className='Filter-label'>Sort</label>
       <select
         className='Filters'
         for='product-sort'
-        value={type}
+        value={sorttype}
         onChange={onSelect}
       >
         <option value='none'>None</option>
