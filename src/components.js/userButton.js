@@ -27,9 +27,6 @@ function Logout() {
 
 export default function UserButton() {
   const { user } = useContext(UserContext);
-  console.log("navigation", user);
-
-  let button;
 
   if (user) {
     return (

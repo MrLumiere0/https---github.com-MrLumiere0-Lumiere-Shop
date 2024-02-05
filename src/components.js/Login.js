@@ -3,7 +3,6 @@ import "../App.css";
 import { auth } from "../config/firebase.js";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import { useEffect } from "react";
 import { UserContext } from "../Context.js/UserContext.js";
 import { useNavigate } from "react-router-dom";
 

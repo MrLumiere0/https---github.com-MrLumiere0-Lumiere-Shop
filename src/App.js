@@ -5,8 +5,7 @@ import Homepage from "./components.js/homepage";
 import Navigation from "./components.js/Navigation";
 import Footer from "./components.js/footer";
 import Login from "./components.js/Login";
-import { auth } from "./config/firebase";
-import { UserContext } from "./Context.js/UserContext";
+import ShopPage from "./components.js/Shopping/shop";
 
 function Shop() {
   return (
@@ -23,7 +22,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Homepage />} />
         <Route exact path='/login' element={<Login />} />
-        <Route exact path='/shop' element={<Shop />} />
+        <Route exact path='/shop' element={<ShopPage />} />
       </Routes>
       <Footer />
     </div>

@@ -10,7 +10,8 @@ export default function Navigation() {
     <div className='navholder'>
       <nav className='nav'>
         <NavLink
-          className={({ isActive }) => (isActive ? "notactive" : "active")}
+          className={({ isActive }) => (!isActive ? "notactive" : "active")}
+          to='/shop'
         >
           SHOP
         </NavLink>
@@ -19,22 +20,3 @@ export default function Navigation() {
     </div>
   );
 }
-
-// // Behavior:
-// will stay at the top of the app
-// // Props:
-// whether the user in logged in:
-
-// 1: change the output of the sign in button with the shopping cart button
-// 2.pass in authenticated user props to determine whether user is signed in
-
-// function AddToCartButt (){
-//     return (
-// <button className="cartButton" onClick = "" >Add to Cart</button>
-//     );
-// }
-
-// function SoldOutButt (){
-// return (
-// <button className="cartButton-sold-out" onClick = "" >Sold Out</button>
-// );
