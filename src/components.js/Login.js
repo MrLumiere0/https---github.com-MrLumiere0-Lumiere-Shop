@@ -43,7 +43,7 @@ export default function LoginPage() {
               }}
             ></input>
             <input
-              type='text'
+              type='password'
               placeholder='Password...'
               className='loginInput'
               onChange={(e) => {

@@ -3,6 +3,7 @@ import "../../App.css";
 import rhude from "../../assets/rhude.jpg";
 import { useEffect } from "react";
 import getImageURL from "../../assets/utils";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ ...product }) {
   return (
@@ -10,14 +11,20 @@ export default function ProductCard({ ...product }) {
       <div>
         <img src={rhude} className='productIMG' />
       </div>
-      <div>
-        <p>{product.name}</p>
-        <p>{product.description}</p>
-        <p>${product.price}</p>
+      <div key={product.sku}>
+        <p className='name'>{product.name}</p>
+        <p className='descr'>
+          <Link to={`/shop/${product.sku}`} className='description'>
+            {product.description}
+          </Link>
+        </p>
+        <p className='price'>${product.price}</p>
       </div>
-      <div>
-        <button>Add to Cart</button>
-        <p>Quantity: {product.quantity}</p>
+      <div class>
+        <button type='submit' className='addbutton'>
+          Add to Cart
+        </button>
+        <p className='quant'>Quantity: {product.quantity}</p>
       </div>
       <div className='sku'>
         <p>SKU:{product.sku}</p>

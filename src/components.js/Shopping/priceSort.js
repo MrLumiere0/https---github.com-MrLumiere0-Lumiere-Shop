@@ -4,6 +4,7 @@ export default function DropDownMenu({ props, onSelect, sorttype }) {
   return (
     <div className='menu'>
       <label className='Filter-label'>Sort</label>
+
       <select
         className='Filters'
         for='product-sort'

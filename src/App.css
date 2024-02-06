@@ -227,15 +227,28 @@
 
 .logout {
   height: 2.5rem;
+  width: auto;
+  min-width: 100px;
   font-size: 1rem;
-  width: 7rem;
   color: white;
   background-color: black;
   border: none;
   border-radius: 9px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
+.cart {
+  height: 2.5rem;
+  width: auto;
+  min-width: 100px;
+  font-size: 1rem;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
 .shop {
   position: relative;
   width: 100vw;
@@ -244,17 +257,16 @@
   display: flex;
   background-color: white;
   margin-top: 10px;
-  margin-bottom: 30px;
+
+  border-bottom: 1px grey solid;
 }
 
 .filter {
   width: 20%;
-  height: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
+  padding-top: 100px;
 }
 
 .menu {
@@ -262,32 +274,68 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 100%;
 }
 .Filter-label {
   font-size: 2rem;
-  font-family: var(--NavFont);
-}
-
-.Filters {
-  width: 50%;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
 .products {
   width: 80%;
   height: 90%;
-  padding: 20px;
+  padding-left: 30px;
+  margin-bottom: 100px;
+
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(1fr, 375px));
-  gap: 15px;
-  margin-top: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
-.card {
-  font-family: var();
+
+.descr {
+  color: black;
+  list-style: none;
 }
+
+.descr a {
+  color: black;
+  list-style: none;
+  display: flex;
+}
+
 .productIMG {
-  max-inline-size: 100%;
-  max-height: 400px;
+  max-width: 70%;
+  max-height: 70%;
+  margin-bottom: -100px;
+}
+
+.name {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.descr {
+  font-weight: 300;
+}
+
+.addbutton {
+  height: 2.5rem;
+  min-width: 125px;
+  max-width: 200px;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.price {
+  font-weight: 900;
+}
+
+.quant {
+  font-weight: 300;
 }

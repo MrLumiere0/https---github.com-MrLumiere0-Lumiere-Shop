@@ -32,7 +32,9 @@ export default function UserButton() {
     return (
       <div className='userbutton'>
         <Logout />
-        <button className='cart'>Cart</button>
+        <button type='submit' className='cart'>
+          Cart
+        </button>
       </div>
     );
   } else {
