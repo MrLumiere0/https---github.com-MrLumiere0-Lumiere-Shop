@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { UserContext } from "../Context.js/UserContext";
 import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function Logout() {
   const userLogout = async () => {
@@ -28,11 +29,17 @@ function Logout() {
 export default function UserButton() {
   const { user } = useContext(UserContext);
 
+  const navigate = useNavigate();
+
+  function toCart() {
+    navigate("./cart");
+  }
   if (user) {
     return (
       <div className='userbutton'>
         <Logout />
-        <button type='submit' className='cart'>
+
+        <button type='submit' className='cart' onClick={toCart}>
           Cart
         </button>
       </div>

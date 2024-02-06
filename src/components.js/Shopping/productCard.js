@@ -1,8 +1,6 @@
 import React from "react";
 import "../../App.css";
 import rhude from "../../assets/rhude.jpg";
-import { useEffect } from "react";
-import getImageURL from "../../assets/utils";
 import { Link } from "react-router-dom";
 
 export default function ProductCard({ ...product }) {
