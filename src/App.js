@@ -19,7 +19,7 @@ function App() {
     <div className='App'>
       <Navigation />
       <Routes>
-        <Route exact path='/shop/:sku' element={<ProductDetailComp />} />
+        <Route exact path='/shop/:id' element={<ProductDetailComp />} />
         <Route exact path='/shop' element={<ShopPage />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/cart' element={<CartPage />} />
