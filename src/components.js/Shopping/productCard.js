@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from "react";
+import React, { useContext } from "react";
 import "../../App.css";
 import rhude from "../../assets/rhude.jpg";
 import { Link } from "react-router-dom";
