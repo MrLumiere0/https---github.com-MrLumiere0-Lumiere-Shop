@@ -407,3 +407,56 @@
   font-weight: 300;
   font-size: 1.25rem;
 }
+
+.cartpage {
+  position: relative;
+  width: 100vw;
+  min-height: 93vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 40px;
+  border-bottom: 1px grey solid;
+}
+
+.cartcard {
+  margin-left: 20px;
+  width: 90%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+.cartpdimg {
+  width: 30%;
+}
+
+.cartIMG {
+  max-width: 100%;
+  height: 100%;
+}
+
+.cartpd {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cartname {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.sec1 {
+  margin-right: 20px;
+  width: 20%;
+}
+
+.cartsku {
+  margin-top: 17px;
+}
+
+.cartprice {
+  font-weight: 300;
+  font-size: 1.25rem;
+}

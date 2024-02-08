@@ -6,16 +6,16 @@ export default function CartPage() {
   const { cartData } = useContext(UserContext);
 
   return (
-    <div className='cart'>
-      <div className='cartcard'>
-        {cartData.map((product) => (
-          <div className='' key={product.id}>
-            <p>{cartData?.length}</p>
+    <div className='cartpage'>
+      {cartData.map((product) => (
+        <div className='cartcard' key={product.id}>
+          {/* <p>{cartData?.length}</p> */}
 
-            <div>
-              <img src={rhude} className='cartIMG' />
-            </div>
-            <div>
+          <div className='cartpdimg'>
+            <img src={rhude} className='cartIMG' />
+          </div>
+          <div className='cartpd'>
+            <div className='sec1'>
               <p className='cartname'>{product.name}</p>
               <p>SKU:{product.sku}</p>
             </div>
@@ -26,11 +26,9 @@ export default function CartPage() {
               <p className=''>Quantity: {product.quantity}</p>
               {/* select w/ options 1-9 max */}
             </div>
-            <div className='sku'></div>
-            {product.quantity * product.price}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }
