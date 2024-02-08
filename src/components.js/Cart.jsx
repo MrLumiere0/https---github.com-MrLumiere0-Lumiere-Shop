@@ -6,29 +6,31 @@ export default function CartPage() {
   const { cartData } = useContext(UserContext);
 
   return (
-    <div className='cartcard'>
-      {cartData.map((product) => (
-        <div className='' key={product.id}>
-          <p>{cartData?.length}</p>
+    <div className='cart'>
+      <div className='cartcard'>
+        {cartData.map((product) => (
+          <div className='' key={product.id}>
+            <p>{cartData?.length}</p>
 
-          <div>
-            <img src={rhude} className='cartIMG' />
+            <div>
+              <img src={rhude} className='cartIMG' />
+            </div>
+            <div>
+              <p className='cartname'>{product.name}</p>
+              <p>SKU:{product.sku}</p>
+            </div>
+            <div>
+              <p className='cartprice'>${product.price}</p>
+            </div>
+            <div className='cartquantity'>
+              <p className=''>Quantity: {product.quantity}</p>
+              {/* select w/ options 1-9 max */}
+            </div>
+            <div className='sku'></div>
+            {product.quantity * product.price}
           </div>
-          <div>
-            <p className='cartname'>{product.name}</p>
-            <p>SKU:{product.sku}</p>
-          </div>
-          <div>
-            <p className='cartprice'>${product.price}</p>
-          </div>
-          <div className='cartquantity'>
-            <p className=''>Quantity: {product.quantity}</p>
-            {/* select w/ options 1-9 max */}
-          </div>
-          <div className='sku'></div>
-          {product.quantity * product.price}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

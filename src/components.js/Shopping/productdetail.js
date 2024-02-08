@@ -33,31 +33,30 @@ export default function ProductDetailComp() {
   }, []);
 
   return (
-    <div className='card'>
-      <p>H</p>
-      <div>
+    <div className='pdcard'>
+      <div className='pdcardimg'>
         <img src={rhude} className='productIMG' />
       </div>
-      <div key={detailtData.id}>
-        <p className='name'>{detailtData.name}</p>
-        <p className='descr'>
-          <Link to={`/shop/${detailtData.id}`} className='description'>
-            {detailtData.description}
-          </Link>
-        </p>
-        <p className='price'>${detailtData.price}</p>
-      </div>
-      <div class>
-        <button type='submit' className='addbutton'>
-          Add to Cart
-        </button>
-        <p className='quant'>Quantity: {detailtData.quantity}</p>
-      </div>
-      <div className='sku'>
-        <p>SKU:{detailtData.sku}</p>
+      <div className='pdcardinfo'>
+        <div key={detailtData.id}>
+          <p className='pdcardname'>{detailtData.name}</p>
+          <p className='pdcarddescr'>
+            <Link to={`/shop/${detailtData.id}`} className='description'>
+              {detailtData.description}
+            </Link>
+          </p>
+          <p className='pdcardprice'>${detailtData.price}</p>
+        </div>
+        <div class>
+          <button type='submit' className='pdcardaddbutton'>
+            Add to Cart
+          </button>
+          <p className='pdcardquant'>Quantity: {detailtData.quantity}</p>
+        </div>
+        <div className='sku'>
+          <p>SKU:{detailtData.sku}</p>
+        </div>
       </div>
     </div>
   );
 }
-
-// When you click

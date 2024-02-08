@@ -50,7 +50,7 @@ export default function UserButton() {
         to='/login'
         className={({ isActive }) => (!isActive ? "notactive" : "active")}
       >
-        Login
+        LOGIN
       </NavLink>
     );
   }
