@@ -16,6 +16,7 @@ export default function CartPage() {
           </div>
           <div className='cartpd'>
             <div className='sec1'>
+              <p className='cartname'>{product.name}</p>
               <p>SKU:{product.sku}</p>
             </div>
             <div>
